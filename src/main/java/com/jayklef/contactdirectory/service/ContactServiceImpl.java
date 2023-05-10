@@ -7,8 +7,14 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public interface ContactService {
+@Service
+public class ContactServiceImpl implements ContactService{
 
+    @Autowired
+    private ContactRepository contactRepository;
 
-    List<Contacts> getAllContacts();
+    @Override
+    public List<Contacts> getAllContacts() {
+        return contactRepository.findAll();
+    }
 }
