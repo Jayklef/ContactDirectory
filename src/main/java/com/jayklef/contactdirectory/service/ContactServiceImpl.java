@@ -1,6 +1,6 @@
 package com.jayklef.contactdirectory.service;
 
-import com.jayklef.contactdirectory.model.Contacts;
+import com.jayklef.contactdirectory.model.Contact;
 import com.jayklef.contactdirectory.repository.ContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,12 @@ public class ContactServiceImpl implements ContactService{
     private ContactRepository contactRepository;
 
     @Override
-    public List<Contacts> getAllContacts() {
+    public List<Contact> getAllContacts() {
         return contactRepository.findAll();
+    }
+
+    @Override
+    public void saveContact(Contact contact) {
+
     }
 }
