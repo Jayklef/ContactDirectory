@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
@@ -22,10 +23,20 @@ public class ContactController {
         model.addAttribute("contacts", contacts);
         return "contacts";
     }
+
+    @GetMapping("addContactForm")
+    public String saveContact(Model model){
+        model.addAttribute("contact", new Contact());
+        return "contact-form";
+    }
+
+
     @PostMapping("/save")
-    public String saveContact(Contact contact){
+    public String saveContact(Contact contact, RedirectAttributes attributes){
+        String saveInfo = "Contact saved successfully";
         contactService.saveContact(contact);
-        return "contact";
+        attributes.addFlashAttribute("message", saveInfo);
+        return "redirect:/contact";
     }
 
 }
