@@ -17,7 +17,7 @@ public class ContactController {
     @Autowired
     private ContactService contactService;
 
-    @GetMapping("/")
+    @GetMapping("/contacts")
     public String getContacts(Model model){
         List<Contact> contacts = contactService.getAllContacts();
         model.addAttribute("contacts", contacts);
@@ -31,12 +31,12 @@ public class ContactController {
     }
 
 
-    @PostMapping("/save")
+    @PostMapping("/saveContact")
     public String saveContact(Contact contact, RedirectAttributes attributes){
         String saveInfo = "Contact saved successfully";
         contactService.saveContact(contact);
         attributes.addFlashAttribute("message", saveInfo);
-        return "redirect:/contact";
+        return "redirect:/contacts";
     }
 
 }

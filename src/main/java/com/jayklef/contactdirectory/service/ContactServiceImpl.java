@@ -20,6 +20,6 @@ public class ContactServiceImpl implements ContactService{
 
     @Override
     public void saveContact(Contact contact) {
-
+        contactRepository.save(contact);
     }
 }

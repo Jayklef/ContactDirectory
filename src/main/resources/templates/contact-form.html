@@ -11,7 +11,7 @@
             <div class="col-lg-4 col-md-4 col-sm-4 container card">
                 <div class="card-body">
                     <h2>Add Contact</h2>
-                    <form th:action="@{/saveContact}" th:Object="${contact}">
+                    <form th:action="@{/saveContact}" th:Object="${contact}" method="post">
                         <div class="form-group">
                             <label for="firstname">Firstname</label>
                             <input type="text" th:field="*{firstname}" class="form-control" id="firstname">
