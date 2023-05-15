@@ -28,7 +28,7 @@
                     <td th:text="${contact.phoneNo}"></td>
                     <td th:text="${contact.address}"></td>
                     <td>
-                        <a th:href="@{/addContactForm(contactId = ${contact.id})}" class="btn btn-info">Update</a>
+                        <a th:href="@{/editContactForm(contactId=${contact.id})}" class="btn btn-info">Update</a>
                     </td>
                 </tr>
             </tbody>

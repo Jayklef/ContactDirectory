@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 
 @Service
 public class ContactServiceImpl implements ContactService{
@@ -26,10 +25,10 @@ public class ContactServiceImpl implements ContactService{
     }
 
     @Override
-    public void updateContact(Long contactId) {
+    public Contact updateContact(Long contactId) {
         Contact contactInDb = contactRepository.findById(contactId).get();
 
-     /*  if (Objects.nonNull(contact.getFirstname()) &&
+/*       if (Objects.nonNull(contact.getFirstname()) &&
        !"".equalsIgnoreCase(String.valueOf(contact.getFirstname()))){
            contactInDb.setFirstname(contact.getFirstname());
        }
@@ -39,6 +38,8 @@ public class ContactServiceImpl implements ContactService{
            contactInDb.setLastname(contact.getLastname());
        }  */
 
+
        contactRepository.save(contactInDb);
+        return contactInDb;
     }
 }

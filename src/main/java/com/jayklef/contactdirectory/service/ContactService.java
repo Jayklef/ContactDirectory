@@ -11,5 +11,5 @@ public interface ContactService {
 
     void saveContact(Contact contact);
 
-    void updateContact(Long contactId);
+    Contact updateContact(Long contactId);
 }
