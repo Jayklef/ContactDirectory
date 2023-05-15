@@ -43,8 +43,9 @@ public class ContactController {
         return "redirect:/contacts";
     }
 
-    @GetMapping("/editContactForm")
+    @GetMapping("editContactForm")
     public String updateContact(@RequestParam Long contactId) {
+        
         contactService.updateContact(contactId);
         return "contact-form";
     }
