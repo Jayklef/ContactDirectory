@@ -44,9 +44,10 @@ public class ContactController {
     }
 
     @GetMapping("editContactForm")
-    public String updateContact(@RequestParam Long contactId) {
+    public String updateContact(@RequestParam Long contactId, Model model) {
         Contact contact =
         contactService.updateContact(contactId);
+        model.addAttribute("contact", contact);
         return "contact-form";
     }
 

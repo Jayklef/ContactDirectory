@@ -4,6 +4,7 @@ import com.jayklef.contactdirectory.model.Contact;
 import com.jayklef.contactdirectory.repository.ContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import java.util.List;
 import java.util.Objects;
@@ -39,7 +40,7 @@ public class ContactServiceImpl implements ContactService{
        }  */
 
 
-       contactRepository.save(contactInDb);
-        return contactInDb;
+        return contactRepository.save(contactInDb);
+
     }
 }
