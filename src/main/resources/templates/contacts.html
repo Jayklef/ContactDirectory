@@ -17,6 +17,7 @@
                     <th>email</th>
                     <th>phoneNo</th>
                     <th>Address</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,6 +27,9 @@
                     <td th:text="${contact.email}"></td>
                     <td th:text="${contact.phoneNo}"></td>
                     <td th:text="${contact.address}"></td>
+                    <td>
+                        <a th:href="@{/addContactForm(contactId = ${contact.id})}" class="btn btn-info">Update</a>
+                    </td>
                 </tr>
             </tbody>
         </table>

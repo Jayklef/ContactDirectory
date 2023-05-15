@@ -37,7 +37,11 @@
                             <input type="text" th:field="*{address}" class="form-control" id="address">
                         </div>
 
-                        <button class="btn btn-primary" type="submit">Save Contact</button>
+                        <div class="m-4">
+                            <button class="btn btn-primary" type="submit">Save Contact</button>
+                            <a th:href="@{/contacts}" class="btn btn-info">Back to List</a>
+                        </div>
+                        <input type="hidden" th:field="*{id}">
                     </form>
                 </div>
             </div>

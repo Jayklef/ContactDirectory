@@ -10,4 +10,6 @@ public interface ContactService {
     List<Contact> getAllContacts();
 
     void saveContact(Contact contact);
+
+    void updateContact(Long contactId);
 }
