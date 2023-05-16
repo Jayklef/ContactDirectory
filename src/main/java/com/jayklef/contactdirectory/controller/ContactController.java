@@ -51,4 +51,9 @@ public class ContactController {
         return "contact-form";
     }
 
+    @GetMapping("deleteContact")
+    public String deleteContact(@RequestParam Long contactId){
+        contactService.deleteById(contactId);
+        return "redirect:/contacts";
+    }
 }

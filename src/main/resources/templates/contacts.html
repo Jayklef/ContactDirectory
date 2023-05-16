@@ -29,6 +29,7 @@
                     <td th:text="${contact.address}"></td>
                     <td>
                         <a th:href="@{/editContactForm(contactId=${contact.id})}" class="btn btn-info">Update</a>
+                        <a th:href="@{/deleteContact(contactId=${contact.id})}" class="btn btn-danger m-2">Delete</a>
                     </td>
                 </tr>
             </tbody>

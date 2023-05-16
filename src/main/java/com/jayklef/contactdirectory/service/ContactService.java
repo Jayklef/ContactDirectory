@@ -12,4 +12,6 @@ public interface ContactService {
     void saveContact(Contact contact);
 
     Contact updateContact(Long contactId);
+
+    void deleteById(Long contactId);
 }
