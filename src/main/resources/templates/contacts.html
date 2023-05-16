@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Contacts List</title>
+    <link rel="stylesheet" th:href="@{/css/dataTables.bootstrap.min.css}">
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
 </head>
 <body>
     <div th:class="container">
         <h2>List of Contacts</h2>
         <a th:href="@{/addContactForm}" class="btn btn-primary mb-3">Add New Contact</a>
-        <table class="table table-bordered table-striped table-hover">
+        <table class="table table-bordered table-striped table-hover" id="contact-list">
             <thead>
                 <tr>
                     <th>firstname</th>
@@ -35,5 +36,8 @@
             </tbody>
         </table>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js">
+    <script th:type="text/javascript" th:href="@{/jQuery/jquery-3.6.0.min.js}"></script>
+
 </body>
 </html>
