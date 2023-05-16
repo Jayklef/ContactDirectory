@@ -36,8 +36,12 @@
             </tbody>
         </table>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script th:type="text/javascript" th:href="@{/jQuery/jquery-3.6.0.min.js}"></script>
-
+    <script>
+        $(document).ready(function () {
+            $("contact-list").DataTable();
+        })
+    </script>
 </body>
 </html>
