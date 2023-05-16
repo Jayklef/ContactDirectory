@@ -42,7 +42,12 @@
   <!--  <script type="text/javascript" th:href="@{/jQuery/datatables.min.js}"></script>  -->
     <script>
         $(document).ready(function () {
-            $("#contact-list").DataTable();
+            $("#contact-list").DataTable({
+                'aoColumnDefs' : [{
+                    'bSortable' : false,
+                    'aTargets' : [-1]
+                }]
+            });
         })
     </script>
 </body>
